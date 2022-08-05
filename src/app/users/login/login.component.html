@@ -1,0 +1,17 @@
+<h2>Child component</h2>
+
+
+<h4>Name is <b>{{objdata.namedata}}</b> and Score is {{objdata.scoredata}}</h4>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Mark</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let item of listarray">
+        <td>{{item.name}}</td>
+        <td>{{item.mark}}</td>
+    </tbody>
+</table>

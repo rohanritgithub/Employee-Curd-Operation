@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    /* max-width: 100%; */
+}
+
+#text{
+    width: 90%;
+    margin: 25% auto;
+    top: 1%;
+    left: 4%;
+    color: whitesmoke;
+}
+#p{
+    padding: 3rem 0px;
+}
+
+.object {
+  animation: MoveUpDown 1s linear infinite;
+  position: absolute;
+  border: 1px solid white;
+  left: 50%;
+  height: 10%;
+  width: 0px;
+  bottom: -30%;
+  margin: 0% auto;
+  
+}
+
+@media screen and (max-width: 1390px) {
+    video {
+      width: 100%;
+    }
+  }
+
+  @keyframes fadeIn{
+    0%{opacity:0;}
+    50%{opacity: 30;}  
+    80%{opacity:50;}
+    100%{opacity:1;}
+    }
+    
+    
+    @keyframes MoveUpDown {
+      0% {
+        bottom: 5%;
+      }
+    }
+/* to {
+    transform: rotate(360deg);
+  } */

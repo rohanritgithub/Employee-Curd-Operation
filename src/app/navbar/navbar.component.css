@@ -1,0 +1,12 @@
+ul {
+    margin-left: 58%;
+    display: flex;
+    justify-content: end;
+}
+li{
+    margin: 2px;
+}
+ul li a:hover {
+    color: white;
+    opacity: 0.5;
+}

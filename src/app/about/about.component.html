@@ -1,0 +1,77 @@
+<style>
+    @keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 col-md-12 p-5">
+            
+            <div>
+                <span class="span">
+                    <span style="opacity: 0.6;" class="font-weight-bold h2">ABOUT</span>&nbsp;&nbsp;<span class="font-weight-bold h3">US</span><hr>                    
+                </span> 
+                <h3 style="opacity: 0.7;">Founded in 2012, InterProducTec has access to research, resources, experience and know-how through the founder’s family business, the Precitec Group.</h3>   
+            </div>
+            <div>
+                <h3 style="opacity: 0.7;">Today, InterProducTec has presence in New York, Munich and Mumbai.</h3>
+            </div>
+            <div>
+                <h3 style="opacity: 0.7;">The ambitious young team consists of about 50 hardware and software engineers, who dedicate their passion and work to provide new and cutting edge technologies to the world of smart products and automation.</h3>
+            </div>
+            <div>
+                <h3 style="opacity: 0.7;">Interproductec is an AI company of innovation. We’re proud to play a critical role in helping businesses to solve their most complex processes with Artificial Intelligence.</h3>
+                <h3 [ngClass]="{'limitTextHeight': isReadMore}" style="opacity: 0.7;">With the growth of technology, we’ve evolved along the way. Most importantly, the trust we have earned from our clients and the team across the world. Our solutions have given substantial growth and benefited the companies to be future ready.</h3>
+            </div>
+            <button class="btn btn-info" type="button" (click)="showText()">
+                {{ isReadMore ? 'Read More': 'Read Less' }}
+              </button>
+        </div>
+    
+        <div class="col-lg-6 col-md-12 p-3">
+            <img class="img-thumbnail" style="width: 80%; height: auto; 
+             animation: rotate 5s linear 1;
+         border-radius: 50%; border: none;" src="https://interproductec.com/wp-content/uploads/elementor/thumbs/About-Us-Category-Image-2-pbg94103abusmj3y2y8zezw8ehxi44n06w2jxvwd4g.jpg" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-12 p-3">
+            <img class="img-thumbnail" style="width: 80%; height: auto; 
+             animation: rotate 5s linear 2;
+         border-radius: 50%; border: none;" src="https://interproductec.com/wp-content/uploads/elementor/thumbs/About-Us_Our-Industry-category-image-pbg949gmzu6dj0rnpjwmjfrdqyrt1ekl81xx9djtkg.jpg" />
+        </div>
+        <div class="col-lg-6 col-md-12 p-5">
+            <div>
+                <span class="span">
+                    <span style="opacity: 0.6;" class="font-weight-bold h2">OUR
+                    </span>&nbsp;&nbsp;<span class="font-weight-bold h2">INDUSTRY</span>                    
+                </span> <hr>
+                <h3 style="opacity: 0.7;">
+                    With over 80 man-years of research and development on computer vision and machine learning applications in industrial manufacturing processes, we are experts at elevating your production beyond the state of the art.</h3>   
+            </div>
+            <div>
+                <h3 style="opacity: 0.7;">Our rich experience of AI application in Food and Baking industry is what makes us reliable for the businesses.</h3>
+            </div>
+            <div>
+                <h3 style="opacity: 0.7;">We help businesses to take their operations to the AI level. It would generate sustainable economic growth through improved process and efficiency.</h3>
+            </div>
+            <div>
+                <h3 [ngClass]="{'limitTextHeight': isReadMore}" style="opacity: 0.7;">The organisational mobility on regular basis with the enhanced operations process, generates transparency, builds trust amongst the stakeholders. With the growing demand of AI in the industry, it’s critical for the businesses to understand its potential and implement.</h3>
+            </div>
+            <button class="btn btn-info" type="button" (click)="showText()">
+                {{ isReadMore ? 'Read More': 'Read Less' }}
+              </button>
+        </div>
+    </div>
+    <button style="border:none" class="btn btn-info"><a routerLink="company" style="text-decoration: none;">Get Record</a></button>
+    
+</div>
+<br>
+
+
+
+
+<router-outlet></router-outlet>

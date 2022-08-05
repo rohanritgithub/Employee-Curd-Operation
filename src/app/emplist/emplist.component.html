@@ -1,0 +1,35 @@
+<div class="container-fluid">
+        <div class="p-4">
+            <a routerLink="create" #btn class="btn btn-secondary">Add new</a>&nbsp;|&nbsp; <a routerLink="create" #btn class="btn btn-secondary">GetEmployee</a>             
+        </div>
+        <br>
+        <!-- <div class="row">
+            <h4 class="text-danger">Error 404 not found </h4>
+        </div> -->
+        <div>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped table-hover" id="datatable" role="grid">
+                    <thead class="bg-secondary text-white">
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Emial</th>
+                            <th>Phone</th>
+                            <th>Website</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of emplist">
+                            <td>{{item.id}}</td>
+                            <td>{{item.name}}</td>
+                            <td>{{item.email}}</td>
+                            <td>{{item.phone}}</td>
+                            <td>{{item.website}}</td>
+                            <td><a routerLink="Edit/{{item.id}}"class="btn btn-info">Edit</a>&nbsp;|&nbsp;<a routerLink="Delete/{{item.delete}}"class="btn btn-danger">Delete</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>  
+        </div>
+    </div>

@@ -1,0 +1,41 @@
+<h2 class="p-4 font-weight-bold text-center text-secondary" style="font-size:3vw;">Validation form</h2>
+<div class="container-fluid">
+    <form [formGroup]="reactiveform">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="from-group">
+                    <label>Login</label>
+                    <input type="text" placeholder="Login Id" formControlName="loginid" class="form-control"  autocomplete="off"/>
+                    <span *ngIf="f['loginid'].getError('required')!=null" class="errormessage">Login Id is required</span>&nbsp;
+                    <span *ngIf="f['loginid'].getError('minlength')!=null" class="errormessage">Login Id should atleast 6 char</span>
+                </div>
+                <br>
+            </div>
+            <div class="col-lg-6 offset-lg-3">
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Password" formControlName="password" class="form-control" autocomplete="off"/>
+                    <span *ngIf="f['password'].getError('required')!=null" class="errormessage">Password is required</span>
+                </div>
+                <br>
+            </div>
+            <div class="col-lg-6 offset-lg-3">
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <input type="confirmpassword" placeholder="Confirm Password" formControlName="confirmpassword" class="form-control"/>
+                    <span *ngIf="f['confirmpassword'].getError('required')!=null" class="errormessage">Confirm Password is required</span>
+                    <span *ngIf="f['confirmpassword'].getError('Mustmatch')!=null" class="errormessage">confirmpassword and password should same</span>
+                </div>
+                <br>
+            </div>
+            
+            <div class="col-lg-6 offset-lg-3">
+                <div class="form-group">
+                    <button [disabled]="reactiveform.invalid" (click)="proced()" class="btn btn-info">Submit</button>
+                </div>
+            </div>  
+        </div>
+    </form>
+</div>
+
+<router-outlet></router-outlet>
